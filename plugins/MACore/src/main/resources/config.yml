@@ -1,0 +1,8 @@
+server:
+  id: auto
+  teleport-servers:
+    - survival
+    - creative
+
+teleport:
+  timeout-seconds: 120

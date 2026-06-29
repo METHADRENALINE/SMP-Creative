@@ -1,0 +1,204 @@
+settings:
+  author: "SMP&Creative"
+  sound-delay-ticks: 4
+
+dialogs:
+  shelley:
+    title: "Shelley"
+    pages:
+      - |-
+        &cShelley &6:
+        &0I-It’s s-so c-cold… Brrr!
+      - |-
+        &cShelley &6:
+        &0By the way, you can sit and lie down anywhere you like! Just not here, you’ll catch a cold… Type &2/sit &0and you’ll sit down. And if you type &2/lay&0, you’ll sprawl on the floor like a tired kitten.
+      - |-
+        &cShelley &6:
+        &0A-and one more thing… You can &2right-click any player &0and hop onto their head, but keep that between us, got it?
+    translations:
+      ua:
+        title: "Шеллі"
+        pages:
+          - |-
+            &cШеллі &6:
+            &0Т-так х-холодно… Бррр!
+          - |-
+            &cШеллі &6:
+            &0До речі, ти можеш сидіти й лежати де завгодно! Тільки не тут, застудишся… Напиши &2/sit &0і сядеш. А якщо напишеш &2/lay&0, розляжешся на підлозі, мов втомлене кошеня.
+          - |-
+            &cШеллі &6:
+            &0І-і ще одне… Ти можеш &2клікнути правою кнопкою по будь-якому гравцю &0і застрибнути йому на голову, але нехай це залишиться між нами, гаразд?
+      ru:
+        title: "Шелли"
+        pages:
+          - |-
+            &cШелли &6:
+            &0Т-так х-холодно… Бррр!
+          - |-
+            &cШелли &6:
+            &0Кстати, ты можешь сидеть и лежать где угодно! Только не здесь, простудишься… Напиши &2/sit &0и сядешь. А если напишешь &2/lay&0, растянешься на полу, как уставший котёнок.
+          - |-
+            &cШелли &6:
+            &0И-и ещё кое-что… Ты можешь &2кликнуть правой кнопкой по любому игроку &0и запрыгнуть ему на голову, но пусть это останется между нами, ладно?
+
+  boris:
+    title: "Boris"
+    pages:
+      - |-
+        &8Boris &6:
+        &0It’s been a long time since I lost my son. All I have left is the Courtyard of the Seal…
+      - |-
+        &8Boris &6:
+        &0Sorry, I don’t remember if you’ve been on the server before. Maybe you’ve achieved a lot already, or maybe you just arrived. Anyway, if you turn right right after the spawn point, you’ll see a portal.
+      - |-
+        &8Boris &6:
+        &0Jump in, and you’ll end up in Survival!
+      - |-
+        &8Boris &6:
+        &0If you want to come back here, just type &2/hub&0. If you want to visit another player in SMP or Creative, type &2/tpa &0[&2player name&0].
+      - |-
+        &8Boris &6:
+        &0They will receive a request with buttons &2[accept] &0or &4[decline]&0. If someone asks to come to you, click the green accept button or the red decline button. The request fades after two minutes.
+    translations:
+      ua:
+        title: "Борис"
+        pages:
+          - |-
+            &8Борис &6:
+            &0Минуло багато часу з того дня, як я загубив сина. Усе, що в мене лишилося, це Двір Печаті…
+          - |-
+            &8Борис &6:
+            &0Вибач, я не пам'ятаю, чи ти вже був на сервері. Може, ти вже багато чого досяг, а може, щойно прибув. У будь-якому разі, якщо відразу після точки спавну повернеш праворуч, побачиш портал.
+          - |-
+            &8Борис &6:
+            &0Стрибни в нього, і потрапиш у Survival!
+          - |-
+            &8Борис &6:
+            &0Якщо захочеш повернутися сюди, просто напиши &2/hub&0. Якщо хочеш навідати іншого гравця у SMP або Creative, напиши &2/tpa &0[&2ім'я гравця&0].
+          - |-
+            &8Борис &6:
+            &0Він отримає запит з кнопками &2[прийняти] &0або &4[відхилити]&0. Якщо хтось попроситься до тебе, натисни зелену кнопку прийняти або червону кнопку відхилити. Запит зникне через дві хвилини.
+      ru:
+        title: "Борис"
+        pages:
+          - |-
+            &8Борис &6:
+            &0Прошло много времени с тех пор, как я потерял сына. Всё, что у меня осталось, это Двор Печати…
+          - |-
+            &8Борис &6:
+            &0Прости, я не помню, был ли ты уже на сервере. Может, ты уже многого достиг, а может, только прибыл. В любом случае, если сразу после точки спавна повернёшь направо, увидишь портал.
+          - |-
+            &8Борис &6:
+            &0Прыгни в него, и попадёшь в Survival!
+          - |-
+            &8Борис &6:
+            &0Если захочешь вернуться сюда, просто напиши &2/hub&0. Если хочешь заглянуть к другому игроку на SMP или Creative, напиши &2/tpa &0[&2имя игрока&0].
+          - |-
+            &8Борис &6:
+            &0Он получит запрос с кнопками &2[принять] &0или &4[отклонить]&0. Если кто-то попросится к тебе, нажми зеленую кнопку принять или красную кнопку отклонить. Запрос исчезнет через две минуты.
+
+  klyment:
+    title: "Klyment-02"
+    page-sounds:
+      1:
+        - entity.iron_golem.repair
+        - entity.copper_golem_oxidized
+        - entity.iron_golem.repair
+    pages:
+      - |-
+        &3Klyment-02 &6:
+        &0Beep-boop...
+      - |-
+        &3Klyment-02 &6:
+        &0Hewwo! I’m a copper golem and my name is Klyment-02!
+      - |-
+        &3Klyment-02 &6:
+        &0Well, technically, that’s my model… but never mind!
+      - |-
+        &3Klyment-02 &6:
+        &0I was built by Boris, who works at the Courtyard of the Seal.
+      - |-
+        &3Klyment-02 &6:
+        &0I used to work there too, a lot, actually! But… Boris didn’t like how efficient I was, so he kicked me out into the street.
+      - |-
+        &3Klyment-02 &6:
+        &0I don’t hold it against him though, he’s got his own bugs in the head!
+      - |-
+        &3Klyment-02 &6:
+        &0Anyway, you can go talk to him and he’ll explain how everything works around here.
+      - |-
+        &3Klyment-02 &6:
+        &0By the way, did you know I can speak every language in the world! Well, almost. I taught the server to speak with players in a few languages, and that is progress!
+      - |-
+        &3Klyment-02 &6:
+        &0Open the language menu with &2/lang&0 or &2/language&0. There you can choose English, Ukrainian, Russian, or Automatic if you want the server to follow your client language.
+      - |-
+        &3Klyment-02 &6:
+        &0When you change it, menus, signs, messages, and our little talks will change with you.
+    translations:
+      ua:
+        title: "Климент-02"
+        pages:
+          - |-
+            &3Климент-02 &6:
+            &0Біп-буп...
+          - |-
+            &3Климент-02 &6:
+            &0Привітик! Я мідний ґолем, і мене звати Климент-02!
+          - |-
+            &3Климент-02 &6:
+            &0Ну, технічно це моя модель… але неважливо!
+          - |-
+            &3Климент-02 &6:
+            &0Мене створив Борис, той, що працює у Дворі Печаті.
+          - |-
+            &3Климент-02 &6:
+            &0Я теж там працював, і чимало, якщо чесно! Але… Борису не сподобалося, наскільки я ефективний, тому він вигнав мене на вулицю.
+          - |-
+            &3Климент-02 &6:
+            &0Але я на нього не ображаюся, у нього свої таргани в голові!
+          - |-
+            &3Климент-02 &6:
+            &0Коротше, можеш піти поговорити з ним, і він пояснить, як тут усе працює.
+          - |-
+            &3Климент-02 &6:
+            &0До речі, а ти знаєш, що я говорю всіма мовами світу! Ну, майже. Я навчив сервер говорити з гравцями кількома мовами, і це теж прогрес!
+          - |-
+            &3Климент-02 &6:
+            &0Відкрий меню мови командою &2/lang&0 або &2/language&0. Там можна вибрати English, Українську, Русский, або Автоматично, якщо хочеш, щоб сервер слухав мову твого клієнта.
+          - |-
+            &3Климент-02 &6:
+            &0Коли ти змінюєш мову, меню, таблички, повідомлення і наші маленькі розмови змінюються разом з тобою.
+      ru:
+        title: "Климент-02"
+        pages:
+          - |-
+            &3Климент-02 &6:
+            &0Бип-буп...
+          - |-
+            &3Климент-02 &6:
+            &0Приветик! Я медный голем, и меня зовут Климент-02!
+          - |-
+            &3Климент-02 &6:
+            &0Ну, технически это моя модель… но неважно!
+          - |-
+            &3Климент-02 &6:
+            &0Меня создал Борис, тот, кто работает во Дворе Печати.
+          - |-
+            &3Климент-02 &6:
+            &0Я тоже там работал, и немало, если честно! Но… Борису не понравилось, насколько я эффективен, поэтому он выгнал меня на улицу.
+          - |-
+            &3Климент-02 &6:
+            &0Но я на него не обижаюсь, у него свои тараканы в голове!
+          - |-
+            &3Климент-02 &6:
+            &0Короче, можешь пойти поговорить с ним, и он объяснит, как тут всё работает.
+          - |-
+            &3Климент-02 &6:
+            &0Кстати, а ты знаешь, что я говорю на всех языках мира! Ну, почти. Я научил сервер говорить с игроками на нескольких языках, и это тоже прогресс!
+          - |-
+            &3Климент-02 &6:
+            &0Открой меню языка командой &2/lang&0 или &2/language&0. Там можно выбрать English, Українську, Русский, или Автоматически, если хочешь, чтобы сервер слушал язык твоего клиента.
+          - |-
+            &3Климент-02 &6:
+            &0Когда ты меняешь язык, меню, таблички, сообщения и наши маленькие разговоры меняются вместе с тобой.

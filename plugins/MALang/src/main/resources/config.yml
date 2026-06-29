@@ -1,0 +1,203 @@
+settings:
+  default-language: en
+  auto-detect-client-language: true
+  players-file: ""
+
+gsit-sync:
+  enabled: true
+  lang-folder: plugins/GSit/lang
+
+welcome-title:
+  enabled: true
+  delay-ticks: 40
+  fade-in: 45
+  stay: 100
+  fade-out: 20
+  languages:
+    en:
+      title: "&3Give 'em heaps,"
+      subtitle: "&6%player%!"
+    ua:
+      title: "&3Задай їм жару,"
+      subtitle: "&6%player%"
+    ru:
+      title: "&3Задай им жару,"
+      subtitle: "&6%player%"
+
+npc-nameplates:
+  enabled: true
+
+mode-selector:
+  enabled: true
+  select-on-join: true
+  slot: 4
+  material: NETHER_STAR
+  menu-size: 27
+  languages:
+    en:
+      item-name: "Mode Selection"
+      item-lore:
+        - "&7Game server selection"
+      menu-title: "Mode Selection"
+      survival-lore:
+        - "&7It's time..."
+        - "&2Challenge yourself on the hardest difficulty!"
+      creative-lore:
+        - "&7Create beauty and chaos..."
+        - "&2WorldEdit support"
+    ua:
+      item-name: "Вибір режиму"
+      item-lore:
+        - "&7Вибір ігрового сервера"
+      menu-title: "Вибір режиму"
+      survival-lore:
+        - "&7Час настав..."
+        - "&2Випробуй себе на найважчій складності!"
+      creative-lore:
+        - "&7Створюй красу й хаос..."
+        - "&2Підтримка WorldEdit"
+    ru:
+      item-name: "Выбор режима"
+      item-lore:
+        - "&7Выбор игрового сервера"
+      menu-title: "Выбор режима"
+      survival-lore:
+        - "&7Время пришло..."
+        - "&2Испытай себя на максимальной сложности!"
+      creative-lore:
+        - "&7Создавай красоту и хаос..."
+        - "&2Поддержка WorldEdit"
+  filler:
+    material: GRAY_STAINED_GLASS_PANE
+    display-name: " "
+  servers:
+    survival:
+      slot: 15
+      material: MANGROVE_LOG
+      display-name: "&cSMP"
+      server: survival
+    creative:
+      slot: 11
+      material: WARPED_STEM
+      display-name: "&bCreative"
+      server: creative
+
+language-selector:
+  enabled: true
+  slot: 6
+  menu-size: 45
+  filler:
+    material: GRAY_STAINED_GLASS_PANE
+    display-name: " "
+  languages:
+    en:
+      item-name: "&6Language"
+      item-lore:
+        - "&7Choose the language the server will use to talk to you"
+      menu-title: "Language"
+      auto-name: "&6Automatic"
+      auto-lore:
+        - "&7Your client language will be used"
+      en-name: "&6English"
+      en-lore: []
+      ua-name: "&6Українська"
+      ua-lore: []
+      ru-name: "&6Русский"
+      ru-lore: []
+      selected: "Selected"
+    ua:
+      item-name: "&6Мова"
+      item-lore:
+        - "&7Виберіть мову, якою сервер спілкуватиметься з вами"
+      menu-title: "Мова"
+      auto-name: "&6Автоматично"
+      auto-lore:
+        - "&7Буде вибрано мову вашого клієнта"
+      en-name: "&6English"
+      en-lore: []
+      ua-name: "&6Українська"
+      ua-lore: []
+      ru-name: "&6Русский"
+      ru-lore: []
+      selected: "Вибрано"
+    ru:
+      item-name: "&6Язык"
+      item-lore:
+        - "&7Выберите язык, на котором сервер будет общаться с вами"
+      menu-title: "Язык"
+      auto-name: "&6Автоматически"
+      auto-lore:
+        - "&7Будет выбран язык вашего клиента"
+      en-name: "&6English"
+      en-lore: []
+      ua-name: "&6Українська"
+      ua-lore: []
+      ru-name: "&6Русский"
+      ru-lore: []
+      selected: "Выбран"
+
+lobby-signs:
+  enabled: false
+  refresh-delay-ticks: 20
+  chunk-refresh-delay-ticks: 10
+  refresh-radius-chunks: 5
+  signs:
+    courtyard-of-the-seal:
+      world: world
+      x: 270
+      y: 9
+      z: 18
+      languages:
+        ua:
+          lines:
+            - ""
+            - "Двір"
+            - "Друку"
+            - ""
+          preserve-lines: []
+        ru:
+          lines:
+            - ""
+            - "Двор"
+            - "Печати"
+            - ""
+          preserve-lines: []
+    grand-hall:
+      world: world
+      x: 269
+      y: 9
+      z: 27
+      languages:
+        ua:
+          lines:
+            - "Велика"
+            - "зала"
+            - ""
+            - ""
+          preserve-lines:
+            - 3
+        ru:
+          lines:
+            - "Большой"
+            - "зал"
+            - ""
+            - ""
+          preserve-lines:
+            - 3
+
+messages:
+  en:
+    current: "&7Current language: &6%language%&7. Mode: &6%mode%&7."
+    language-set: "&2Language set to %language%."
+    auto-set: "&2Language auto-detection enabled. Current language: %language%."
+    usage: "&cUsage: /lang ua, /lang ru, /lang en, or /lang auto."
+  ua:
+    current: "&7Поточна мова: &6%language%&7. Режим: &6%mode%&7."
+    language-set: "&2Мову змінено на %language%."
+    auto-set: "&2Автовизначення мови увімкнено. Поточна мова: %language%."
+    usage: "&cВикористання: /lang ua, /lang ru, /lang en або /lang auto."
+  ru:
+    current: "&7Текущий язык: &6%language%&7. Режим: &6%mode%&7."
+    language-set: "&2Язык изменён на %language%."
+    auto-set: "&2Автоопределение языка включено. Текущий язык: %language%."
+    usage: "&cИспользование: /lang ua, /lang ru, /lang en или /lang auto."

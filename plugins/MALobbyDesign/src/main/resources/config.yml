@@ -1,0 +1,39 @@
+server:
+  id: auto
+
+tasks:
+  interval-ticks: 1
+
+Speed Effect:
+  enabled: true
+  duration-ticks: 3600
+  amplifier: 1
+  hide-particles: true
+
+Survival Portal Effects:
+  enabled: true
+  world: world
+  particle: minecraft:raid_omen
+  x: 258.300
+  y: 7.00000
+  z: 8.558
+  offset-x: 1
+  offset-y: 5
+  offset-z: 3
+  speed: 0.001
+  count: 1
+  mode: force
+
+Creative Portal Effects:
+  enabled: true
+  world: world
+  particle: minecraft:soul_fire_flame
+  x: 278.700
+  y: 7.00000
+  z: 8.538
+  offset-x: 2
+  offset-y: 3
+  offset-z: 3
+  speed: 0.0001
+  count: 1
+  mode: force

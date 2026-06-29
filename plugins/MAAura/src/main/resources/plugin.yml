@@ -1,0 +1,11 @@
+name: MAAura
+version: 1.0.14
+main: net.methadrenaline.smpcreative.maaura.MAAuraPlugin
+api-version: '1.21'
+author: METHADRENALINE
+description: Per-player aura menu and particles for SMP&Creative.
+softdepend: [MALang, DeluxeHub]
+commands:
+  aura:
+    description: Opens the aura menu.
+    usage: /aura
