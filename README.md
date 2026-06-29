@@ -1,6 +1,6 @@
 # SMP&Creative
 
-Development repo for the SMP&Creative mc server.
+Dev repo for the SMP&Creative mc server.
 
 SMP&Creative is a private mc server project built for one specific environment. This repo contains server side code, resources and content made for this server, not a general purpose plugin collection.
 
