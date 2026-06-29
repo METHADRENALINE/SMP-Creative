@@ -48,4 +48,4 @@ See [LICENSE](LICENSE) for details.
 
 The SMP&Creative Content Pack is covered by separate resource pack terms.
 
-See [TERMS.md](resourcepacks/SMP%26Creative%20Content%20Pack/TERMS.md) for details.
+See its [TERMS.md](resourcepacks/SMP%26Creative%20Content%20Pack/TERMS.md) for details.
