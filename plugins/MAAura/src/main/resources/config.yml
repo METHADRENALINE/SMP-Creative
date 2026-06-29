@@ -1,0 +1,68 @@
+server:
+  id: auto
+
+settings:
+  storage-file: ma-aura-players.yml
+  particle-interval-ticks: 1
+  lobby-item-slot: 2
+  lobby-item-refresh-ticks: 40
+  menu-size: 27
+  main-menu-size: 45
+  filler-material: GRAY_STAINED_GLASS_PANE
+
+auras:
+  find-your-zen:
+    owners: []
+    material: CHERRY_SAPLING
+    particle: minecraft:cherry_leaves
+    offset-x: 1
+    offset-y: 1.5
+    offset-z: 0.5
+    speed: 10
+    count: 1
+    mode: force
+  loyalty-aura:
+    owners: []
+    material: EMERALD
+    particle: minecraft:glow
+    offset-x: 1
+    offset-y: 1.5
+    offset-z: 0.5
+    speed: 10
+    count: 1
+    mode: force
+
+redeem:
+  input-window:
+    title:
+      en: "&fRedeem your aura code"
+      ua: "&fАктивуй код аури"
+      ru: "&fАктивируй код ауры"
+    hint:
+      en: "&7XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
+      ua: "&7XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
+      ru: "&7XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
+    explanation:
+      en: "&7You can receive an aura activation code for taking part in events, or from a friend who shared the code with you. After activating a valid code, you will receive your aura! One code can be activated only once, and after activation it immediately becomes invalid."
+      ua: "&7Код активації аури тобі можуть дати за участь у подіях або твій друг, який поділився з тобою цим кодом. Після активації дійсного коду ти отримаєш свою ауру! Один код можна активувати лише один раз, після активації він одразу втрачає актуальність."
+      ru: "&7Код активации ауры тебе могут дать за участие в событиях или твой друг, который поделился с тобой этим кодом. После активации действительного кода ты получишь свою ауру! Один код можно активировать только один раз, после активации он сразу теряет актуальность."
+    input-key: code
+    input-width: 300
+    label-visible: true
+    initial: ""
+    max-length: 29
+    submit-label:
+      en: "&aRedeem"
+      ua: "&aАктивувати"
+      ru: "&aАктивировать"
+    back-label:
+      en: "&fBack"
+      ua: "&fНазад"
+      ru: "&fНазад"
+    submit-width: 120
+    explanation-width: 320
+    columns: 1
+    callback-lifetime-seconds: 300
+    can-close-with-escape: true
+    pause: false
+  codes: {}

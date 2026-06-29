@@ -1,0 +1,17 @@
+name: MADialogs
+version: 1.20.1
+main: net.methadrenaline.smpcreative.madialogs.MADialogsPlugin
+api-version: '1.21'
+author: METHADRENALINE
+description: Book GUI dialogues for SMP&Creative lobby NPCs.
+depend: [FancyNpcs]
+softdepend: [MALang]
+commands:
+  madialog:
+    description: Opens an NPC dialog.
+    usage: /madialog <dialog> [page]
+    aliases: [mdialog, npcdialog]
+permissions:
+  madialogs.admin:
+    description: Allows reloading MADialogs.
+    default: op
