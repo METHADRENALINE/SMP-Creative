@@ -10,13 +10,13 @@ Production runtime files, compiled jars, logs, databases, player data, redeem co
 
 | Path                                   | Type             | Purpose                                                                 |
 | -------------------------------------- | ---------------- | ----------------------------------------------------------------------- |
-| plugins/MACore                         | Paper plugin     | Lightweight chat and teleport requests for SMP&Creative backend servers |
-| plugins/MALang                         | Paper plugin     | Per-player language layer for SMP&Creative backend servers              |
-| plugins/MADialogs                      | Paper plugin     | Book GUI dialogues for SMP&Creative lobby NPCs                          |
-| plugins/MAAura                         | Paper plugin     | Per-player aura menu and particles for SMP&Creative                     |
-| plugins/MALobbyDesign                  | Paper plugin     | Lobby-only ambience tasks for SMP&Creative                              |
-| plugins/MAVeloCore                     | Velocity plugin  | Proxy core for SMP&Creative Velocity network                            |
-| resourcepacks/smpcreative-content-pack | mc resource pack | Server logos, icons, and other cosmetic assets for SMP&Creative         |
+| [plugins/MACore](plugins/MACore)                         | Paper plugin     | Lightweight chat and teleport requests                                  |
+| [plugins/MALang](plugins/MALang)                         | Paper plugin     | Per-player language layer                                               |
+| [plugins/MADialogs](plugins/MADialogs])                      | Paper plugin     | GUI dialogues for SMP&Creative lobby NPCs                               |
+| [plugins/MAAura](plugins/MAAura)                         | Paper plugin     | Player aura menu and particles for SMP&Creative                         |
+| [plugins/MALobbyDesign](lugins/MALobbyDesign)                  | Paper plugin     | Lobby ambience tasks                                                    |
+| [plugins/MAVeloCore](plugins/MAVeloCore)                     | Velocity plugin  | Proxy core for Velocity network                                         |
+| [resourcepacks/smpcreative-content-pack](resourcepacks/smpcreative-content-pack) | Resource pack    | Server logos, icons, and other cosmetic assets for SMP&Creative         |
 
 ## Build
 
