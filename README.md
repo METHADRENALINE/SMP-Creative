@@ -42,7 +42,7 @@ Copyright (C) 2026 METHADRENALINE
 
 Licensing is split by content type.
 
-Source code, plugin resources, Gradle build files, and other code-related files are licensed under the GNU General Public License v3.0 only.
+Source code, plugin resources, Gradle build files, and other code related files are licensed under the GNU General Public License v3.0 only.
 
 See [LICENSE](LICENSE) for details.
 
