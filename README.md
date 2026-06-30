@@ -2,7 +2,7 @@
 
 Dev repo for the SMP&Creative mc server by METHADRENALINE ᵍʳᵒᵘᵖ.
 
-SMP&Creative is a private mc server project built for one specific environment. This repo contains server side code, resources and content made for this server, not a general purpose plugin collection.
+SMP&Creative is a private mc server project built for one specific environment. This repo contains server side code, resources and content made only for this server.
 
 Production runtime files, compiled jars, logs, databases, player data, redeem codes, credentials, tokens, server config and machine specific deployment files are intentionally excluded.
 
