@@ -3,4 +3,4 @@ version: 1.0.1
 main: net.methadrenaline.smpcreative.malobbydesign.MALobbyDesignPlugin
 api-version: '1.21'
 author: METHADRENALINE
-description: Lobby-only ambience tasks for SMP&Creative.
+description: Lobby ambience tasks.
