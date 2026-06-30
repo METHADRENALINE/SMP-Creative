@@ -2,7 +2,7 @@
 
 Copyright (C) 2026 METHADRENALINE
 
-These terms apply to the SMP&Creative resource pack located in this folder and to its assets, including textures, icons, font assets, pack icons and other non-code content.
+These terms apply to the SMP&Creative resource pack located in this folder and to its assets, including textures, icons, font assets, pack icons.
 
 ## You may
 
