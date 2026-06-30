@@ -1,0 +1,25 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "logos:font/lobby.png",
+      "ascent": 0,
+      "height": 20,
+      "chars": ["ҁ"]
+    },
+    {
+      "type": "bitmap",
+      "file": "logos:font/smp.png",
+      "ascent": 0,
+      "height": 30,
+      "chars": ["Ǒ"]
+    },
+    {
+      "type": "bitmap",
+      "file": "logos:font/creative.png",
+      "ascent": 0,
+      "height": 30,
+      "chars": ["ɧ"]
+    }
+  ]
+}
