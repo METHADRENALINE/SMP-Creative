@@ -3,7 +3,7 @@ version: 1.1.0
 main: net.methadrenaline.smpcreative.macore.MACorePlugin
 api-version: '1.21'
 author: METHADRENALINE
-description: Lightweight chat and teleport requests for SMP&Creative backend servers.
+description: Lightweight chat and teleport requests.
 softdepend: [MALang]
 commands:
   tpa:
