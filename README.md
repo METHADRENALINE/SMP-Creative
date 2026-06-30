@@ -16,7 +16,7 @@ Production runtime files, compiled jars, logs, databases, player data, redeem co
 | [plugins/MAAura](plugins/MAAura)                         | Paper plugin     | Player aura menu and particles for SMP&Creative                         |
 | [plugins/MALobbyDesign](plugins/MALobbyDesign)                  | Paper plugin     | Lobby ambience tasks                                                    |
 | [plugins/MAVeloCore](plugins/MAVeloCore)                     | Velocity plugin  | Proxy core for Velocity network                                         |
-| [resourcepacks/SMP&Creative Content Pack](resourcepacks/SMP&Creative Content Pack) | Resource pack    | Server logos, icons, and other cosmetic assets for SMP&Creative         |
+| [resourcepacks/SMP&Creative Content Pack](resourcepacks/SMP&Creative-Content-Pack) | Resource pack    | Server logos, icons, and other cosmetic assets for SMP&Creative         |
 
 ## Build
 
