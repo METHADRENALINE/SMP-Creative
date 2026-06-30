@@ -38,8 +38,6 @@ All plugins are built from the repo root.
 
 ## License
 
-Copyright (C) 2026 METHADRENALINE
-
 Licensing is split by content type.
 
 Code related files are licensed under the GNU General Public License v3.0 only.
