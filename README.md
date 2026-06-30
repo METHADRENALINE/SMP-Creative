@@ -14,7 +14,7 @@ Production runtime files, compiled jars, logs, databases, player data, redeem co
 | [plugins/MALang](plugins/MALang)                         | Paper plugin     | Per-player language layer                                               |
 | [plugins/MADialogs](plugins/MADialogs])                      | Paper plugin     | GUI dialogues for SMP&Creative lobby NPCs                               |
 | [plugins/MAAura](plugins/MAAura)                         | Paper plugin     | Player aura menu and particles for SMP&Creative                         |
-| [plugins/MALobbyDesign](lugins/MALobbyDesign)                  | Paper plugin     | Lobby ambience tasks                                                    |
+| [plugins/MALobbyDesign](plugins/MALobbyDesign)                  | Paper plugin     | Lobby ambience tasks                                                    |
 | [plugins/MAVeloCore](plugins/MAVeloCore)                     | Velocity plugin  | Proxy core for Velocity network                                         |
 | [resourcepacks/SMP&Creative Content Pack](resourcepacks/SMP&CreativeContentPack) | Resource pack    | Server logos, icons, and other cosmetic assets for SMP&Creative         |
 
