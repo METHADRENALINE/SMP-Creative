@@ -1,6 +1,6 @@
 # SMP&Creative
 
-Dev repo for the SMP&Creative mc server.
+Dev repo for the SMP&Creative mc server by METHADRENALINE ᵍʳᵒᵘᵖ.
 
 SMP&Creative is a private mc server project built for one specific environment. This repo contains server side code, resources and content made for this server, not a general purpose plugin collection.
 
