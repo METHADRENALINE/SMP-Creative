@@ -120,6 +120,20 @@ public final class MAAuraPlugin extends JavaPlugin implements Listener, TabExecu
 
     private void ensureDefaultConfigValues() {
         boolean changed = false;
+        changed |= setDefaultConfigValue("storage.type", "yaml");
+        changed |= setDefaultConfigValue("storage.postgres.properties-file", "");
+        changed |= setDefaultConfigValue("storage.postgres.jdbc-url", "jdbc:postgresql://127.0.0.1:5432/smpcreative");
+        changed |= setDefaultConfigValue("storage.postgres.username", "smpcreative");
+        changed |= setDefaultConfigValue("storage.postgres.password", "change-me");
+        changed |= setDefaultConfigValue("storage.postgres.table-prefix", "ma_aura_");
+        changed |= setDefaultConfigValue("storage.postgres.import-yaml", false);
+        changed |= setDefaultConfigValue("storage.postgres.pool.maximum-size", 3);
+        changed |= setDefaultConfigValue("storage.postgres.pool.minimum-idle", 1);
+        changed |= setDefaultConfigValue("storage.postgres.pool.connection-timeout-ms", 3000L);
+        changed |= setDefaultConfigValue("storage.postgres.pool.validation-timeout-ms", 1000L);
+        changed |= setDefaultConfigValue("storage.postgres.pool.idle-timeout-ms", 600000L);
+        changed |= setDefaultConfigValue("storage.postgres.pool.max-lifetime-ms", 1800000L);
+        changed |= setDefaultConfigValue("storage.postgres.pool.keepalive-time-ms", 300000L);
         changed |= setDefaultConfigValue("settings.main-menu-size", 45);
         changed |= setDefaultConfigValue("auras." + AuraCatalog.LOYALTY + ".owners", List.of());
         if ("GLOW_BERRIES".equalsIgnoreCase(getConfig().getString("auras." + AuraCatalog.LOYALTY + ".material", ""))) {
@@ -225,6 +239,7 @@ public final class MAAuraPlugin extends JavaPlugin implements Listener, TabExecu
             Bukkit.getScheduler().cancelTask(lobbyItemTaskId);
             lobbyItemTaskId = -1;
         }
+        auraStorage.close();
     }
 
     @Override
