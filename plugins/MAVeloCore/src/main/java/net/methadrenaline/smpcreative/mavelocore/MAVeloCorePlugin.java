@@ -8,6 +8,7 @@ import com.velocitypowered.api.event.connection.DisconnectEvent;
 import com.velocitypowered.api.event.connection.PluginMessageEvent;
 import com.velocitypowered.api.event.connection.PostLoginEvent;
 import com.velocitypowered.api.event.proxy.ProxyInitializeEvent;
+import com.velocitypowered.api.event.proxy.ProxyShutdownEvent;
 import com.velocitypowered.api.plugin.Plugin;
 import com.velocitypowered.api.plugin.annotation.DataDirectory;
 import com.velocitypowered.api.proxy.Player;
@@ -25,7 +26,7 @@ import org.slf4j.Logger;
 @Plugin(
         id = "mavelocore",
         name = "MAVeloCore",
-        version = "1.3.1",
+        version = "1.4.0",
         description = "Proxy core for SMP&Creative Velocity network.",
         url = "",
         authors = {"METHADRENALINE"}
@@ -51,7 +52,12 @@ public final class MAVeloCorePlugin {
         languageStore.loadIfChanged();
         server.getChannelRegistrar().register(MACORE_CHANNEL);
         registerWhisperCommands();
-        logger.info("MAVeloCore loaded. Shared language file: {}", languageStore.playersFile());
+        logger.info("MAVeloCore loaded. Language storage: {}", languageStore.storageDescription());
+    }
+
+    @Subscribe
+    public void onProxyShutdown(ProxyShutdownEvent event) {
+        languageStore.close();
     }
 
     @Subscribe(order = PostOrder.FIRST)

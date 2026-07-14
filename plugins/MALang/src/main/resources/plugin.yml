@@ -1,9 +1,9 @@
 name: MALang
-version: 1.2.10
+version: 1.2.11
 main: net.methadrenaline.smpcreative.malang.MALangPlugin
 api-version: '1.21'
 author: METHADRENALINE
-description: Per-player language layer.
+description: Per-player language layer for SMP&Creative backend servers.
 softdepend: [DeluxeHub, ProtocolLib, FancyNpcs]
 commands:
   lang:

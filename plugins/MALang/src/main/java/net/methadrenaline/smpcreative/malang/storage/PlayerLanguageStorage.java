@@ -1,72 +1,30 @@
 package net.methadrenaline.smpcreative.malang.storage;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.UUID;
 import net.methadrenaline.smpcreative.malang.lang.LanguageCode;
-import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class PlayerLanguageStorage {
     private final JavaPlugin plugin;
-    private final Map<UUID, String> overrides = new HashMap<>();
-    private final Map<UUID, String> clientLanguages = new HashMap<>();
-    private File playersFile;
-    private long playersFileLastModified = -1L;
+    private LanguageStorageBackend backend;
 
     public PlayerLanguageStorage(JavaPlugin plugin) {
         this.plugin = plugin;
     }
 
     public void load() {
-        playersFile = playersFile();
-        YamlConfiguration playersConfig = YamlConfiguration.loadConfiguration(playersFile);
-        playersFileLastModified = playersFile.exists() ? playersFile.lastModified() : -1L;
-        overrides.clear();
-        clientLanguages.clear();
+        backend().load();
+    }
 
-        ConfigurationSection section = playersConfig.getConfigurationSection("players");
-        if (section == null) {
-            return;
-        }
-
-        for (String uuidText : section.getKeys(false)) {
-            try {
-                UUID uuid = UUID.fromString(uuidText);
-                String rawLanguage = section.getString(uuidText + ".language", "");
-                if (rawLanguage == null || rawLanguage.isBlank()) {
-                    continue;
-                }
-
-                String language = LanguageCode.normalize(rawLanguage);
-                if (LanguageCode.isSupported(language)) {
-                    String source = section.getString(uuidText + ".source", "manual");
-                    if ("client".equalsIgnoreCase(source)) {
-                        clientLanguages.put(uuid, language);
-                    } else {
-                        overrides.put(uuid, language);
-                    }
-                }
-            } catch (IllegalArgumentException ignored) {
-                plugin.getLogger().warning("Ignoring invalid UUID in players.yml: " + uuidText);
-            }
+    public void close() {
+        if (backend != null) {
+            backend.close();
         }
     }
 
     public void loadIfChanged() {
-        if (playersFile == null) {
-            load();
-            return;
-        }
-
-        long lastModified = playersFile.exists() ? playersFile.lastModified() : -1L;
-        if (lastModified != playersFileLastModified) {
-            load();
-        }
+        backend().loadIfChanged();
     }
 
     public String getLanguageCode(Player player) {
@@ -80,86 +38,59 @@ public final class PlayerLanguageStorage {
     }
 
     public String languageCodeFromCache(Player player) {
-        String override = overrides.get(player.getUniqueId());
-        if (override != null) {
-            return override;
+        LanguagePreference preference = backend().preference(player.getUniqueId());
+        if (preference != null) {
+            return preference.language();
         }
 
         if (!plugin.getConfig().getBoolean("settings.auto-detect-client-language", true)) {
             return LanguageCode.normalize(plugin.getConfig().getString("settings.default-language", LanguageCode.ENGLISH));
         }
-
-        String clientLanguage = clientLanguages.get(player.getUniqueId());
-        if (clientLanguage != null) {
-            return clientLanguage;
-        }
-
         return LanguageCode.detect(player.getLocale());
     }
 
     public boolean hasManualOverride(UUID uuid) {
-        return overrides.containsKey(uuid);
+        loadIfChanged();
+        LanguagePreference preference = backend().preference(uuid);
+        return preference != null && preference.manual();
     }
 
     public String manualOverride(UUID uuid) {
-        return overrides.get(uuid);
+        loadIfChanged();
+        LanguagePreference preference = backend().preference(uuid);
+        return preference != null && preference.manual() ? preference.language() : null;
     }
 
-    public String setClientLanguage(UUID uuid, String language) {
-        String previous = clientLanguages.put(uuid, language);
-        saveLanguagePreference(uuid, language, "client");
-        return previous;
+    public String setClientLanguage(Player player, String language) {
+        loadIfChanged();
+        LanguagePreference previous = backend().preference(player.getUniqueId());
+        backend().save(player, language, "client");
+        return previous != null && !previous.manual() ? previous.language() : null;
     }
 
     public void setAutoLanguage(Player player) {
-        UUID uuid = player.getUniqueId();
-        overrides.remove(uuid);
-        String detected = LanguageCode.detect(player.getLocale());
-        clientLanguages.put(uuid, detected);
-        saveLanguagePreference(uuid, detected, "client");
+        backend().save(player, LanguageCode.detect(player.getLocale()), "client");
     }
 
     public void setManualLanguage(Player player, String language) {
-        UUID uuid = player.getUniqueId();
-        overrides.put(uuid, language);
-        clientLanguages.remove(uuid);
-        saveLanguagePreference(uuid, language, "manual");
+        backend().save(player, language, "manual");
     }
 
     public int manualCount() {
-        return overrides.size();
+        return backend().manualCount();
     }
 
     public int clientCount() {
-        return clientLanguages.size();
+        return backend().clientCount();
     }
 
-    private File playersFile() {
-        String configured = plugin.getConfig().getString("settings.players-file", "");
-        if (configured != null && !configured.isBlank()) {
-            File file = new File(configured);
-            if (file.isAbsolute()) {
-                return file;
-            }
-            return new File(plugin.getDataFolder(), configured);
+    private LanguageStorageBackend backend() {
+        if (backend == null) {
+            String type = plugin.getConfig().getString("storage.type", "yaml");
+            backend = "postgres".equalsIgnoreCase(type) || "postgresql".equalsIgnoreCase(type)
+                    ? new PostgresLanguageStorageBackend(plugin)
+                    : new YamlLanguageStorageBackend(plugin);
         }
-
-        return new File(plugin.getDataFolder(), "players.yml");
-    }
-
-    private void saveLanguagePreference(UUID uuid, String language, String source) {
-        YamlConfiguration latestConfig = YamlConfiguration.loadConfiguration(playersFile);
-        latestConfig.set("players." + uuid + ".language", language);
-        latestConfig.set("players." + uuid + ".source", source);
-        try {
-            File parent = playersFile.getParentFile();
-            if (parent != null && !parent.exists() && !parent.mkdirs()) {
-                plugin.getLogger().warning("Could not create language storage folder: " + parent);
-            }
-            latestConfig.save(playersFile);
-            playersFileLastModified = playersFile.exists() ? playersFile.lastModified() : -1L;
-        } catch (IOException exception) {
-            plugin.getLogger().warning("Could not save language preference for " + uuid + ": " + exception.getMessage());
-        }
+        return backend;
     }
 }

@@ -10,6 +10,24 @@ settings:
   main-menu-size: 45
   filler-material: GRAY_STAINED_GLASS_PANE
 
+storage:
+  type: yaml
+  postgres:
+    properties-file: ""
+    jdbc-url: jdbc:postgresql://127.0.0.1:5432/smpcreative
+    username: smpcreative
+    password: change-me
+    table-prefix: ma_aura_
+    import-yaml: false
+    pool:
+      maximum-size: 3
+      minimum-idle: 1
+      connection-timeout-ms: 3000
+      validation-timeout-ms: 1000
+      idle-timeout-ms: 600000
+      max-lifetime-ms: 1800000
+      keepalive-time-ms: 300000
+
 auras:
   find-your-zen:
     owners: []
