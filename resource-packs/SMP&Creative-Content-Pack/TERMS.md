@@ -18,12 +18,6 @@ These terms apply to the SMP&Creative resource pack located in this folder and t
 * use SMP&Creative or METHADRENALINE logos, icons or assets to imply endorsement, partnership or official status;
 * claim ownership of this resource pack or its assets.
 
-## Credit
-
-If you modify or reference the resource pack assets themselves, credit is required:
-
-SMP&Creative Content Pack by METHADRENALINE
-
 ## No warranty
 
 This resource pack is provided as is, without warranty of any kind.
