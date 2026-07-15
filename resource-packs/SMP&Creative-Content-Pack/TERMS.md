@@ -11,7 +11,7 @@ These terms apply to the SMP&Creative resource pack located in this folder and t
 
 ## You may not
 
-* reupload this resource pack;
+* reupload or sell this resource pack;
 * include this resource pack or its assets in another resource pack, modpack, server pack, plugin, server project or paid product;
 * use SMP&Creative or METHADRENALINE logos, icons or assets to imply endorsement, partnership or official status;
 * claim ownership of this resource pack or its assets.
