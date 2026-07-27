@@ -325,12 +325,15 @@ public final class MALangPlugin extends JavaPlugin implements Listener, TabExecu
         String subtitle = getConfig().getString(basePath + "subtitle", "&6%player%!");
         title = title.replace("%player%", player.getName());
         subtitle = subtitle.replace("%player%", player.getName());
+        int stay = player.hasPlayedBefore()
+                ? getConfig().getInt("welcome-title.stay", 100)
+                : getConfig().getInt("welcome-title.first-join-stay", getConfig().getInt("welcome-title.stay", 100));
 
         player.sendTitle(
                 color(title),
                 color(subtitle),
                 getConfig().getInt("welcome-title.fade-in", 45),
-                getConfig().getInt("welcome-title.stay", 100),
+                stay,
                 getConfig().getInt("welcome-title.fade-out", 20)
         );
     }

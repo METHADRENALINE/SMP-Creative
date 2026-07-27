@@ -1,4 +1,4 @@
-version = "1.4.0"
+version = "1.4.1"
 
 val velocityApiVersion: String by project
 val postgresqlVersion: String by project

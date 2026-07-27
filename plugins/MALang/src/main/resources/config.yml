@@ -30,6 +30,7 @@ welcome-title:
   delay-ticks: 40
   fade-in: 45
   stay: 100
+  first-join-stay: 200
   fade-out: 20
   languages:
     en:

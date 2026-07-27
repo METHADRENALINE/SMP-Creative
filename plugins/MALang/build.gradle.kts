@@ -1,4 +1,4 @@
-version = "1.2.11"
+version = "1.2.13"
 
 val paperApiVersion: String by project
 val protocolLibVersion: String by project

@@ -26,7 +26,7 @@ import org.slf4j.Logger;
 @Plugin(
         id = "mavelocore",
         name = "MAVeloCore",
-        version = "1.4.0",
+        version = "1.4.1",
         description = "Proxy core for SMP&Creative Velocity network.",
         url = "",
         authors = {"METHADRENALINE"}
