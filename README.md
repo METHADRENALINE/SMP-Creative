@@ -18,24 +18,6 @@ Production runtime files, compiled jars, logs, databases, player data, redeem co
 | [plugins/MAVeloCore](plugins/MAVeloCore)                     | Velocity plugin  | Proxy core for Velocity network                                         |
 | [resourcepacks/SMP&Creative Content Pack](resource-packs/SMP&Creative-Content-Pack) | Resource pack    | Server logos, icons, and other cosmetic assets for SMP&Creative         |
 
-## Build
-
-Use JDK 25 and the Gradle Wrapper.
-
-### Linux
-
-```bash
-./gradlew build
-```
-
-### Windows
-
-```powershell
-.\gradlew.bat build
-```
-
-All plugins are built from the repo root.
-
 ## License
 
 Licensing is split by content type.
