@@ -20,8 +20,6 @@ Production runtime files, compiled jars, logs, databases, player data, redeem co
 
 ## License
 
-Licensing is split by content type.
-
 Code related files are licensed under the GNU General Public License v3.0 only.
 
 See [LICENSE](LICENSE) for details.
