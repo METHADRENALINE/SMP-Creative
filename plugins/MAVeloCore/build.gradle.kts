@@ -6,6 +6,9 @@ val hikariCpVersion: String by project
 val shade by configurations.creating
 
 dependencies {
+    testImplementation("com.velocitypowered:velocity-api:$velocityApiVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.11.4")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     compileOnly("com.velocitypowered:velocity-api:$velocityApiVersion")
     annotationProcessor("com.velocitypowered:velocity-api:$velocityApiVersion")
     shade("org.postgresql:postgresql:$postgresqlVersion")
@@ -14,6 +17,10 @@ dependencies {
     }
     implementation("org.postgresql:postgresql:$postgresqlVersion")
     implementation("com.zaxxer:HikariCP:$hikariCpVersion")
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 tasks.jar {

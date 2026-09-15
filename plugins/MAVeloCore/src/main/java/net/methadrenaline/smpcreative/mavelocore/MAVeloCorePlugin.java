@@ -17,9 +17,12 @@ import com.velocitypowered.api.proxy.messages.MinecraftChannelIdentifier;
 import java.nio.file.Path;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Consumer;
+import net.kyori.adventure.text.Component;
 import net.methadrenaline.smpcreative.mavelocore.chat.GlobalChatListener;
 import net.methadrenaline.smpcreative.mavelocore.lang.SharedLanguageStore;
 import net.methadrenaline.smpcreative.mavelocore.network.NetworkJoinMessages;
+import net.methadrenaline.smpcreative.mavelocore.network.PublicAnnouncements;
 import net.methadrenaline.smpcreative.mavelocore.whisper.WhisperCommand;
 import org.slf4j.Logger;
 
@@ -38,6 +41,7 @@ public final class MAVeloCorePlugin {
     private final Logger logger;
     private final SharedLanguageStore languageStore;
     private final GlobalChatListener globalChatListener;
+    private final PublicAnnouncements publicAnnouncements;
 
     @Inject
     public MAVeloCorePlugin(ProxyServer server, Logger logger, @DataDirectory Path dataDirectory) {
@@ -45,6 +49,8 @@ public final class MAVeloCorePlugin {
         this.logger = logger;
         this.languageStore = new SharedLanguageStore(dataDirectory, logger);
         this.globalChatListener = new GlobalChatListener(server, logger);
+        this.publicAnnouncements = new PublicAnnouncements(exception ->
+                logger.warn("Public announcement listener failed", exception));
     }
 
     @Subscribe(order = PostOrder.LAST)
@@ -57,7 +63,12 @@ public final class MAVeloCorePlugin {
 
     @Subscribe
     public void onProxyShutdown(ProxyShutdownEvent event) {
+        publicAnnouncements.clear();
         languageStore.close();
+    }
+
+    public AutoCloseable subscribePublicAnnouncements(String language, Consumer<Component> listener) {
+        return publicAnnouncements.subscribe(language, listener);
     }
 
     @Subscribe(order = PostOrder.FIRST)
@@ -107,5 +118,6 @@ public final class MAVeloCorePlugin {
 
             recipient.sendMessage(NetworkJoinMessages.message(languageStore.languageFor(recipient), username, join));
         }
+        publicAnnouncements.publish(username, join);
     }
 }
