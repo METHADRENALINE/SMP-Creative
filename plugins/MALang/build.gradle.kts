@@ -1,4 +1,4 @@
-version = "1.2.13"
+version = "1.2.14"
 
 val paperApiVersion: String by project
 val protocolLibVersion: String by project
@@ -9,8 +9,8 @@ val shade by configurations.creating
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:$paperApiVersion")
-    compileOnly("com.comphenix.protocol:ProtocolLib:$protocolLibVersion")
-    compileOnly("de.oliver:FancyNpcs:$fancyNpcsVersion")
+    compileOnly("net.dmulloy2:ProtocolLib:$protocolLibVersion")
+    compileOnly("maven.modrinth:fancynpcs:$fancyNpcsVersion")
     shade("org.postgresql:postgresql:$postgresqlVersion")
     shade("com.zaxxer:HikariCP:$hikariCpVersion") {
         exclude(group = "org.slf4j", module = "slf4j-api")
