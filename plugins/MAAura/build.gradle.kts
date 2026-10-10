@@ -1,4 +1,4 @@
-version = "1.0.17"
+version = "1.0.18"
 
 val paperApiVersion: String by project
 val postgresqlVersion: String by project

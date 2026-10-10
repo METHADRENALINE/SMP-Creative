@@ -1,7 +1,7 @@
 name: MACore
-version: 1.1.1
+version: 1.1.2
 main: net.methadrenaline.smpcreative.macore.MACorePlugin
-api-version: '26.2'
+api-version: '26.3'
 author: METHADRENALINE
 description: Lightweight chat and teleport requests for SMP&Creative backend servers.
 softdepend: [MALang]
