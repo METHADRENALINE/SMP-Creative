@@ -21,11 +21,3 @@ Examples of relevant security issues:
 * unintended access to player data or generated storage files;
 * crashes or denial-of-service issues caused by malformed input;
 * unsafe handling of plugin messages between Velocity and Paper servers.
-
-## What is out of scope
-
-The following are not covered by this security policy:
-
-* production server configs;
-* local machine setup;
-* logs, databases, player files and generated runtime data;
